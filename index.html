@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreams Pyro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="top" id="home">
+        <div class="navbar">
+            <div class="logo_containeer">
+            <div class="nav_logo">
+                <!-- Logo image will be added here -->
+            </div>
+            </div>
+            <!-- <ul class="nav_links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul> -->
+        </div>
+    </section>
+
+
+    
+    <section class="mid">
+        <h2>Delight your occasion</h2>  
+        <h2>with</h2>
+        <h1>Dreams Pyro Event</h1>
+        <div class="mid_img"></div>
+    </section>
+
+    <section class="cards">
+        <div class="card" onclick="openModal('birthday')">
+            <img src="image2.png"alt=" birhday">
+            <h3>Birthday Party</h3>
+            <p>Make your special day unforgettable.</p>
+            <p>We specialize in creating unforgettable birthday experiences, tailored to your preferences. From themed decorations to live entertainment, we ensure every detail is covered. Our team will handle everything, so you can focus on enjoying the celebration with your loved ones. We also offer customizable catering options and exciting games for all ages. Let us turn your special day into a magical event!</p>
+            <p><strong>Service Charge:</strong> Starting from 2500, depending on the event size and customization.</p>
+        </div>
+        <div class="card" onclick="openModal('wedding')">
+            <img src="image3.png">
+            <h3>Wedding</h3>
+            <p>
+
+                Our services include everything from breathtaking floral arrangements and elegant stage setups to beautiful designs that will set the perfect mood.
+                
+                We’ll work closely with you to design a wedding that reflects your unique style and preferences. 
+                
+                Service Charge: Our wedding packages start at 14999 This is a flexible rate depending on the scale of the event, location, and specific customizations you may want. Our team will work with you to create a package that suits your budget while providing the highest quality services."</p>
+        </div>
+        <div class="card" onclick="openModal('Baby Shower')">
+            <img src="image4.png">
+            <h3>Baby Shower</h3>
+            <p>
+
+                 Themed decorations and centerpieces to fun and engaging games, we offer everything you need to host the perfect baby shower. Whether you want a cozy, intimate gathering or a larger celebration, our team will work with you to bring your vision to life.
+                
+                 and we can organize entertainment that will make the day even more special.
+
+                Service Charge: Our Baby Shower packages start at 3499, depending on the size of the event and specific customizations you require. We’ll work with you to ensure that your event fits within your budget while still offering high-quality service."</p>
+        </div>
+        <div class="card" onclick="openModal('Special entry')">
+            <img src="image5.png">
+            <h3>Special Entry</h3>
+            <p>
+
+                Our Special Entry services include everything from coordinated lighting and sound to custom stage designs and unique effects. We can provide dramatic effects like fog, confetti showers, and even pyrotechnic displays to make your entrance stand out.
+                , we will handle every aspect of the production. From planning to execution, our team will make sure your special entry is seamless and unforgettable.
+                Service Charge: Our Special Entry packages start at 9999. The final cost depends on the complexity of the effects and customizations you require. We are happy to tailor our services to fit your event’s needs and your budget..</p>
+        </div>
+       
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Event Image">
+            <h3 id="modal-title">Event Title</h3>
+            <p id="modal-description">Service description goes here.</p>
+            <p id="modal-price">Service charge: $0</p>
+        </div>
+    </div>
+
+    <footer>
+        <h2>About & Contact</h2>
+        <p>Dreams Pyro Event Management</p>
+        <p>Owner: Rohit Rokde</p>
+        <p>Phone: +919146858366</p>
+        <p>Email: dreams@pyroevent.com</p>
+        <p>Instagram: <a href="https://www.instagram.com/dreamspyroeventmanagement">@dreamspyro</a></p>
+        <p>Follow us on social media for the latest updates!</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function openModal(eventType) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modal-image');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            const modalPrice = document.getElementById('modal-price');
+    
+            // Setting content based on the card clicked
+            if (eventType === 'birthday') {
+                modalImage.src = 'image2.png';  // Replace with actual image path
+                modalTitle.textContent = 'Birthday Party';
+                modalDescription.textContent = 'Make your special day unforgettable with our party services.';
+                modalPrice.textContent = 'Service charge: 2500';
+            } else if (eventType === 'wedding') {
+                modalImage.src = 'image3.png';
+                modalTitle.textContent = 'Wedding';
+                modalDescription.textContent = 'Creating magical wedding moments with our dedicated team.';
+                modalPrice.textContent = 'Service charge: 14999';
+            } else if (eventType === 'Baby Shower') {
+                modalImage.src = 'image4.png';
+                modalTitle.textContent = 'Baby Shower';
+                modalDescription.textContent = 'Celebrate love and joy with a beautifully organized event.';
+                modalPrice.textContent = 'Service charge: 3499';
+            } else if (eventType === 'Special Entry') {
+                modalImage.src = 'image5.png';
+                modalTitle.textContent = 'Special Entry';
+                modalDescription.textContent = 'Professional event management for all your business needs.';
+                modalPrice.textContent = 'Service charge: 9999';
+            } 
+    
+            modal.style.display = 'block';
+        }
+    
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    
+        // Close the modal if user clicks outside the modal content
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html

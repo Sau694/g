@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+html {
+    scroll-behavior: smooth;
+}
+.navbar{
+    background-color: transparent;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-top: 30px;
+
+
+}
+.logo_containeer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    border-radius: 50%;
+    animation: moveToTopCenterAndExpand 2s ease forwards;
+}
+
+/* .nav_logo img {
+
+    padding-top: 150px;
+    height: 300px;
+    width: 300px;
+    display: block;
+ 
+    margin: 0 auto;
+    border-radius: 155px;
+    overflow: hidden;
+} */
+.nav_logo {
+    position: absolute;
+    top: 0; /* Start in the top-left corner */
+    left: 0; /* Start in the top-left corner */
+    width: 50px; /* Initial small size */
+    height: 50px;
+    /* padding: 20px; */
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    animation: moveToTopCenterAndExpand 2s ease forwards; /* Apply the animation */
+}
+
+@keyframes moveToTopCenterAndExpand {
+    0% {
+        /* top: 0;
+        left: 0; */
+        transform:translate(-100px, -50%) scale(0.5); /* Start small */
+        opacity: 0;
+    }
+    50% {
+        /* top: 0; */
+        left: 50%; /* Move to the center horizontally */
+        transform: translate(-50%, -50%) scale(0.5); /* Center horizontally, still small */
+        opacity: 1;
+    }
+    100% {
+        top: 6%;
+        /* top: 0; Stay at the top */
+        left: 50%; /* Stay centered horizontally */
+        transform: translateX(-50%) scale(2.1); /* Expand to final size */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .nav_logo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .nav_logo {
+        width: 80px; /* Adjust for smaller screens */
+        height: 80px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .nav_logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .nav_links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-right: 0;
+    }
+}
+ul li{
+    list-style: none;
+    display: flex;
+}
+.nav_links{
+    padding-top: 50px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 80px;
+    text-decoration: none;
+    margin-right: 80px;
+
+}
+.nav_links li a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+}
+.nav_links li a:hover{
+    color: rgb(104, 97, 97);
+}
+.mid_img{
+    line-height: 40px;
+    background-image: url( image1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+ 
+}
+
+
+@media (max-width: 768px) {
+    .mid_img {
+        background-size: cover;
+        background-position: center center;
+    }
+}
+ .mid h1{
+    text-align: center;
+    color: #333;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   background:linear-gradient(45deg,#555,#f555);
+   -webkit-background-clip:text ;
+   -webkit-text-fill-color: transparent;
+
+}
+.mid h2{
+    text-align: center;
+   letter-spacing: 1px;
+   margin-top: 10px;
+    font-size: 45px;
+    font-weight: 300;
+    color: #555;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.mid h1,.mid h2{
+    animation:fadlen 1.5s ease-in;
+}
+@keyframes fadlen{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    background-color: #e0e0e0;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Footer (About & Contact) */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ffb400;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay background */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
